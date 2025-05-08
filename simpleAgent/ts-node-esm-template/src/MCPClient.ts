@@ -15,8 +15,20 @@ export default class MCPClient {
         this.args = args
     }
 
+    public async close() {
+      await this.mcp.close();
+    }
 
-    async connectToServer(serverScriptPath: string) {
+    public async init() {
+      await this.connectToServer();
+    }
+
+    public getTools() {
+      return this.tools;
+    }
+    
+
+    private async connectToServer() {
         try {
       
           this.transport = new StdioClientTransport({

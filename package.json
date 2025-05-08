@@ -1,8 +1,14 @@
 {
+	"scripts": {
+		"dev": "tsx simpleAgent/ts-node-esm-template/src/index.ts"
+	},
 	"dependencies": {
-		"dotenv": "^16.5.0",
-		"openai": "^4.96.0",
 		"@modelcontextprotocol/sdk": "^1.10.2",
-		"chalk": "^5.4.1"
+		"chalk": "^5.4.1",
+		"dotenv": "^16.5.0",
+		"openai": "^4.96.0"
+	},
+	"devDependencies": {
+		"tsx": "^4.19.4"
 	}
 }
