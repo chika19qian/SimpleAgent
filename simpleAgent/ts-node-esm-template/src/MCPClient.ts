@@ -26,7 +26,13 @@ export default class MCPClient {
     public getTools() {
       return this.tools;
     }
-    
+
+    public callTool(name: string, params: Record<string, any>) {
+      return this.mcp.callTool({
+          name,
+          arguments: params,
+      });
+  }
 
     private async connectToServer() {
         try {
